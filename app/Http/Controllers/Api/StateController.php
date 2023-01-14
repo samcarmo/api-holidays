@@ -17,7 +17,12 @@ class StateController extends Controller
      */
     public function index()
     {
-        //
+        $state = State::all();
+
+        return response()->json([
+            'status' => true,
+            'states' => $state
+        ]);
     }
 
     /**
